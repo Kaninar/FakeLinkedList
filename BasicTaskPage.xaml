@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lists_LAB.BasicTaskPage"
+             Title="NewPage1">
+    <VerticalStackLayout>
+        <ListView x:Name="ListV"
+                  ItemsSource="{Binding collection}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Num}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Сделать дело" Clicked="Button_Clicked"/> 
+    </VerticalStackLayout>
+</ContentPage>

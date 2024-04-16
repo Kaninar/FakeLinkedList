@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lists_LAB.MainPage">
+    <ContentPage.Resources>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="WidthRequest" Value="200"/>
+        </Style>
+    </ContentPage.Resources>
+    <Border 
+        Stroke="White" 
+        WidthRequest="250" 
+        HeightRequest="270"
+         StrokeShape="RoundRectangle 50,50,50,50">
+        <Frame WidthRequest="250" HeightRequest="270">
+            <VerticalStackLayout
+            Spacing="25"
+            VerticalOptions="Center" HorizontalOptions="Center">
+                <Label Text="Выберете задание" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Button 
+                    x:Name="BasicTaskButton" 
+                    Style="{StaticResource ButtonStyle}"
+                    Text="Базовый"
+                    Clicked="BasicTaskButton_Clicked"/>
+                <Button 
+                    x:Name="NormalTaskButton" 
+                    Style="{StaticResource ButtonStyle}"
+                    Text="Средний"
+                    Clicked="NormalTaskButton_Clicked"/>
+                <Button 
+                    x:Name="HardTaskButton" 
+                    Style="{StaticResource ButtonStyle}"
+                    Text="Сложный"
+                    Clicked="HardTaskButton_Clicked"/>
+        
+            </VerticalStackLayout>
+        </Frame>
+    </Border>
+</ContentPage>
